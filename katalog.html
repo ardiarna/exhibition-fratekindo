@@ -1,0 +1,95 @@
+
+<div class="handphone">
+  <img src="./images/fjg.png" style="width: 50%; min-width:200px; padding: 35px 0px 35px;"/>
+  <div class="d-flex" style="text-align: left; padding: 0px 15px 30px;">
+    <span class="huruf-dinamis">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    </span>
+    <img src="./images/50lectra.png" style="width: 80px; height: 80px; margin-left: 20px;"/>
+  </div>
+  <div id="dvDokumen"></div>
+  <span class="huruf-dinamis" style="margin-top: 50px;">&copy; PT. Fratekindo Jaya Gemilang</span>
+  <span class="huruf-dinamis" style="margin-bottom: 30px;">2023</span>
+</div>
+    
+<script type="text/javascript">
+  function createHtmlDetil(item) {
+    let widget = '';
+    if(item.image == '') {
+      widget = `
+        <div class="kotak-item">
+          <div class="kotak-item-bawah" style="border-radius:7px; opacity:0.8">
+            <span class="huruf-dinamis" style="color: #25a36a; font-weight: bold;">${item.title}</span>
+            <button type="button">
+              <span class="huruf-dinamis" style="font-size: 10px;">${item.type}</span>
+            </button>
+          </div>
+        </div>`;
+    } else {
+      widget = `
+        <div class="kotak-item" ${item.type == 'HIDDEN' ? 'style="visibility:hidden;"' : ''}>
+          <div class="kotak-item-atas" style="background-image: url('./images/${item.image}')"></div>
+          <div class="kotak-item-bawah">
+            <div style="height: 100%; display: flex; align-items:center;">
+              <span class="huruf-dinamis" style="color: #25a36a; font-weight: bold;">${item.title}</span>
+            </div>
+            <button type="button">
+              <span class="huruf-dinamis" style="font-size: 10px;">${item.type}</span>
+            </button>
+          </div>
+        </div>`;
+    }
+    if(item.link == '') {
+      return widget;
+    } else {
+      // return `<a href="./downloads/${item.link}" download="${item.title.replace(/ /g,'_')}">${widget}</a>`;
+      return `<a href="./downloads/${item.link}" download="${item.link}">${widget}</a>`;
+    }
+  }
+
+  async function getDocuments() {
+    let response = await fetch('./documents3.json');
+    let resp = await response.json();
+    let hasil = '';
+    for (const item of resp.data) {
+      let detil_out = '';
+      for (const detil of item.documents) {
+        detil_out += createHtmlDetil(detil); 
+      }
+      hasil += `
+        <div class="kotak" id="dok_${item.id}">
+          <div class="kotak-sub1">
+            <span class="huruf-judul">${item.title}</span>
+            <span class="huruf-subjudul">${item.subtitle}</span>
+          </div>
+          <div class="kotak-sub2">
+            <img src="./images/${item.image}"/>
+            <span class="huruf-dinamis">${item.description}</span>
+          </div>
+          <button id="btDokumen_${item.id}" class="tombol align-self-end" type="button" onclick="showDokumen('${item.id}')">
+            <span class="huruf-dinamis">Document</span>
+            <i class="nav-icon fas fa-chevron-down fa-sm" style="color: white; margin-left: 20px;"></i>
+          </button>
+          <div id="dvDokumen_${item.id}" style="display: none;">
+            <div class="kotak-list">${detil_out}</div>
+          </div>
+        </div>`;
+    }
+    $('#dvDokumen').html(hasil);
+  };
+
+  function showDokumen(id) {
+    if ($(`#dvDokumen_${id}`).is(":visible")) {
+      $(`#dvDokumen_${id}`).hide(600);
+      $('#btDokumen_'+id).html('<span class="huruf-dinamis">Document</span><i class="nav-icon fas fa-chevron-down fa-sm" style="color: white; margin-left: 20px;"></i>');
+    } else {
+      $(`#dvDokumen_${id}`).show(600);
+      $('#btDokumen_'+id).html('<span class="huruf-dinamis">Document</span><i class="nav-icon fas fa-minus fa-sm" style="color: white; margin-left: 20px;"></i>');
+    }
+  }
+
+  $(document).ready(function () {
+    getDocuments();
+  });
+  
+</script>

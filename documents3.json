@@ -1,0 +1,217 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "title": "Fashion",
+      "image": "INFO-image.png",
+      "subtitle": "Our solutions bring together the fashion industry software, hardware, services and data you need to put the right product in the hands of the right person, at the right time.",
+      "description": "Our solutions talk to each other and cover the complete process — from ideation to point of sale — to connect every actor in the fashion value chain. It is a smarter way to work. Which means you can innovate faster and go to market quicker. Never skip a trend. And never miss a chance to turn demands into opportunities.",
+      "documents": [
+        {
+          "title": "Vector Fashion iQ50, iQ80",
+          "image": "INFO-image3.png",
+          "type": "PDF",
+          "link": "technical-datasheet-vector-fashion-iq-series-en.pdf"
+        },
+        {
+          "title": "Vector Fashion iX, iX6, iX9",
+          "image": "INFO-image2.png",
+          "type": "PDF",
+          "link": "lectra-technical-datasheet-vectorfashion-ix-series-en.pdf"
+        },
+        {
+          "title": "Flex Offer",
+          "image": "INFO-image5.png",
+          "type": "PDF",
+          "link": "brochure-flex-offer-en.pdf"
+        },
+        {
+          "title": "Modaris",
+          "image": "INFO-image4.png",
+          "type": "PDF",
+          "link": "brochure-solution-modaris-en.pdf"
+        },
+        {
+          "title": "OptiPlan",
+          "image": "INFO-image25.png",
+          "type": "PDF",
+          "link": "product-datasheet-optiplan-en.pdf"
+        },
+        {
+          "title": "All documnets",
+          "image": "",
+          "type": "ZIP",
+          "link": "lectra-fashion-en.zip"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Automotive",
+      "image": "INFO-image11.png",
+      "subtitle": "For automotive suppliers who need to take their products to market quickly in a fast-moving business environment, Lectra Automotive is ideally positioned to  support them, with industry experience reaching back to 1991.",
+      "description": "Lectra’s extensive expertise in 3D/2D automotive product design and development and cutting room processes enables manufacturers of fabric seating and interiors, automotive leather and airbag cushions to achieve long-term operational excellence objectives while building a pathway to future manufacturing standards, all without compromising quality.",
+      "documents": [
+        {
+          "title": "Vector Auto iP6, iP9",
+          "image": "INFO-image13.png",
+          "type": "PDF",
+          "link": "technical-datasheet-vectorauto-ip6-ip9-en.pdf"
+        },
+        {
+          "title": "Vector Auto iQ - iX series",
+          "image": "INFO-image12.png",
+          "type": "PDF",
+          "link": "technical-datasheet-vector-automotive-ix-iq-series-en.pdf"
+        },
+        {
+          "title": "Diamino TechTex",
+          "image": "INFO-image16.png",
+          "type": "PDF",
+          "link": "product-datasheet-diaminotechtex-en.pdf"
+        },
+        {
+          "title": "Formaris",
+          "image": "INFO-image15.png",
+          "type": "PDF",
+          "link": "product-datasheet-formaris-en.pdf"
+        },
+        {
+          "title": "Design Concept 2D/3D",
+          "image": "INFO-image17.png",
+          "type": "PDF",
+          "link": "brochure-designconcept-automotive-en.pdf"
+        },
+        {
+          "title": "All documnets",
+          "image": "",
+          "type": "ZIP",
+          "link": "lectra-automotive.zip"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Footwear",
+      "image": "INFO-image18.png",
+      "subtitle": "VectorFootwear delivers a high level of flexibility andunrivaled cutting quality.",
+      "description": "VectorFootwear machines are versatile and can be used for all manufacturing models and types of footwear textiles to help you produce at optimal speedand efficiency. Whether you are producing low volumes, high volumes, wide or small product ranges, you can always achieve operational excellence with a VectorFootwear cutting room.",
+      "documents": [
+        {
+          "title": "Vector Footwear iP6",
+          "image": "INFO-image13.png",
+          "type": "PDF",
+          "link": "factsheet-vector-footwear-ip6-prospects-en.pdf"
+        },
+        {
+          "title": "Vector Footwear iX, iX6",
+          "image": "INFO-image19.png",
+          "type": "PDF",
+          "link": "technical-datasheet-vectorfootwear-ix-series-en.pdf"
+        },
+        {
+          "title": "Diamino Footwear",
+          "image": "INFO-image20.png",
+          "type": "PDF",
+          "link": "footwear-cutting-room-brochure-en.pdf"
+        },
+        {
+          "title": "All documnets",
+          "image": "",
+          "type": "ZIP",
+          "link": "lectra-footwear.zip"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Furniture",
+      "image": "INFO-image21.png",
+      "subtitle": "Our solutions give you everything you need to optimize how you make upholstered furniture – from design through to production.",
+      "description": "By keeping you connected to your data and automating tasks, we help you to reduce errors and save material. So, you become more profitable. It’s a level of certainty over your process that helps to secure the future of your business.Behind our solutions, there’s 40 years’ experience in the furniture sector. Plus, a worldwide team of experts with local knowledge.",
+      "documents": [
+        {
+          "title": "Vector Furniture iQ - iX Series",
+          "image": "INFO-image12.png",
+          "type": "PDF",
+          "link": "technical-datasheet-vector-furniture-en.pdf"
+        },
+        {
+          "title": "Versalis Furniture",
+          "image": "INFO-image22.png",
+          "type": "PDF",
+          "link": "solution-brochure-versalis-furniture-en.pdf"
+        },
+        {
+          "title": "Diamino TechTex",
+          "image": "INFO-image16.png",
+          "type": "PDF",
+          "link": "product-datasheet-diaminotechtex-en.pdf"
+        },
+        {
+          "title": "Formaris Furniture",
+          "image": "INFO-image23.png",
+          "type": "PDF",
+          "link": "brochure-formaris-furniture-en.pdf"
+        },
+        {
+          "title": "Design Concept 2D/3D",
+          "image": "INFO-image17.png",
+          "type": "PDF",
+          "link": "solution-brochure-designconcept-furniture-en.pdf"
+        },
+        {
+          "title": "All documnets",
+          "image": "",
+          "type": "ZIP",
+          "link": "lectra-furniture.zip"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Lingerie",
+      "image": "INFO-image24.png",
+      "subtitle": "Our solutions give you everything you need to optimize how you make upholstered furniture – from design through to production.",
+      "description": "By keeping you connected to your data and automating tasks, we help you to reduce errors and save material. So, you become more profitable. It’s a level of certainty over your process that helps to secure the future of your business.Behind our solutions, there’s 40 years’ experience in the furniture sector. Plus, a worldwide team of experts with local knowledge.",
+      "documents": [
+        {
+          "title": "Vector Lingerie iX Series",
+          "image": "INFO-image2.png",
+          "type": "PDF",
+          "link": "technical-datasheet-vector-lingerie-i-series-en.pdf"
+        },
+        {
+          "title": "Flex Offer",
+          "image": "INFO-image5.png",
+          "type": "PDF",
+          "link": "brochure-flex-offer-en.pdf"
+        },
+        {
+          "title": "Modaris",
+          "image": "INFO-image4.png",
+          "type": "PDF",
+          "link": "brochure-solution-modaris-en.pdf"
+        },
+        {
+          "title": "OptiPlan",
+          "image": "INFO-image25.png",
+          "type": "PDF",
+          "link": "product-datasheet-optiplan-en.pdf"
+        },
+        {
+          "title": "",
+          "image": "INFO-image25.png",
+          "type": "HIDDEN",
+          "link": ""
+        },
+        {
+          "title": "All documnets",
+          "image": "",
+          "type": "ZIP",
+          "link": "lectra-lingerie.zip"
+        }
+      ]
+    }
+  ]
+}
