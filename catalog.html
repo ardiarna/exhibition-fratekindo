@@ -3,7 +3,11 @@
   <img src="./images/fjg.png" style="width: 50%; min-width:200px; padding: 35px 0px 35px;"/>
   <div class="d-flex" style="text-align: left; padding: 0px 15px 30px;">
     <span class="huruf-dinamis">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+      Lectra celebrates its 50th anniversary in 2023!
+      <br/><br/>
+      It all started on November 12, 1973. What a journey it has been since then! A journey full of passion, innovation and of course challenges, with one sole objective, serving our customers.
+      <br/><br/>
+      Two whole generations of success and the promise of new goals for future generations!
     </span>
     <img src="./images/50lectra.png" style="width: 80px; height: 80px; margin-left: 20px;"/>
   </div>
@@ -48,7 +52,7 @@
   }
 
   async function getDocuments() {
-    let response = await fetch('./documents3.json');
+    let response = await fetch('./documents4.json');
     let resp = await response.json();
     let hasil = '';
     for (const item of resp.data) {
@@ -67,8 +71,7 @@
             <span class="huruf-dinamis">${item.description}</span>
           </div>
           <button id="btDokumen_${item.id}" class="tombol align-self-end" type="button" onclick="showDokumen('${item.id}')">
-            <span class="huruf-dinamis">Document</span>
-            <i class="nav-icon fas fa-chevron-down fa-sm" style="color: white; margin-left: 20px;"></i>
+            <span class="huruf-dinamis">Download Documents</span><i class="nav-icon fas fa-chevron-down fa-sm" style="color: white; margin-left: 15px;"></i>
           </button>
           <div id="dvDokumen_${item.id}" style="display: none;">
             <div class="kotak-list">${detil_out}</div>
@@ -81,10 +84,10 @@
   function showDokumen(id) {
     if ($(`#dvDokumen_${id}`).is(":visible")) {
       $(`#dvDokumen_${id}`).hide(600);
-      $('#btDokumen_'+id).html('<span class="huruf-dinamis">Document</span><i class="nav-icon fas fa-chevron-down fa-sm" style="color: white; margin-left: 20px;"></i>');
+      $('#btDokumen_'+id).html('<span class="huruf-dinamis">Download Documents</span><i class="nav-icon fas fa-chevron-down fa-sm" style="color: white; margin-left: 15px;"></i>');
     } else {
       $(`#dvDokumen_${id}`).show(600);
-      $('#btDokumen_'+id).html('<span class="huruf-dinamis">Document</span><i class="nav-icon fas fa-minus fa-sm" style="color: white; margin-left: 20px;"></i>');
+      $('#btDokumen_'+id).html('<span class="huruf-dinamis">Download Documents</span><i class="nav-icon fas fa-minus fa-sm" style="color: white; margin-left: 15px;"></i>');
     }
   }
 

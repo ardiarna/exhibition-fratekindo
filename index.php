@@ -55,7 +55,7 @@
       .handphone {
         width: 576px;
         min-height: 100vh;
-        background-image: url('./images/bgtop.png'), linear-gradient(to right, #5dc4f0, #6bbb97);
+        background-image: url('./images/bgtop02.png'), linear-gradient(to right, #5dc4f0, #6bbb97);
         background-size: 100%;
         display: flex;
         flex-direction: column;
@@ -66,7 +66,7 @@
       .handphone2 {
         width: 576px;
         min-height: 100vh;
-        background-image: url('./images/bgtop2.png'), linear-gradient(to right, #5dc4f0, #6bbb97);
+        background-image: url('./images/bgtop01.png'), linear-gradient(to right, #5dc4f0, #6bbb97);
         background-size: 100%;
         display: flex;
         flex-direction: column;
@@ -214,7 +214,9 @@
         <img src="./images/fjg.png" style="width: 50%; min-width:200px; padding: 35px 0px 35px;"/>
         <div class="d-flex" style="text-align: left; padding: 10px 15px;">
           <span class="huruf-std" style="margin-bottom: 15px;">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            PT Fratekindo Jaya Gemilang was founded in 1991 as exclusive sole agent of Lectra France in Indonesia. Lectra is the world leader in integrated technology CAD/CAM solution based in France.
+            <br/><br/>
+            Thanks to fill in your professional's contact below prior to download our documentations
           </span>
           <img src="./images/50lectra.png" style="width: 80px; height: 80px; margin-left: 20px;"/>
         </div>
@@ -280,7 +282,7 @@
           $.post("proses.php?mode=add", data, function(resp, stat){
             if(resp.status.toString() == "1") {
               showMessageSuccess(resp.message);
-              $("#dvLoad").load('katalog.html'); 
+              $("#dvLoad").load('catalog.html'); 
             } else {
               showMessageError(resp.message);
             }
@@ -293,7 +295,7 @@
           $cookie = $_COOKIE;
           if(isset($cookie['fjgemail'])) {
             ?>
-              $("#dvLoad").load('katalog.html'); 
+              $("#dvLoad").load('catalog.html'); 
             <?php
           }
         ?>
