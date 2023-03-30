@@ -1,0 +1,54 @@
+
+<div class="handphone">
+  <img src="./images/fjg.png" style="width: 50%; min-width:200px; padding: 35px 0px 35px;"/>
+  <a class="tombol align-self-end" type="button" href="proses.php?mode=excel&key=a007ea18d8284a42b8e0FJG320fac2c0051">
+    <span class="huruf-std">Download Excel</span>
+  </a>
+  <div id="dvDokumen"></div>
+  <span class="huruf-dinamis" style="margin-top: 50px;">&copy; PT. Fratekindo Jaya Gemilang</span>
+  <span class="huruf-dinamis" style="margin-bottom: 30px;">2023</span>
+</div>
+    
+<script type="text/javascript">
+  
+  async function getDocuments() {
+    $.post("proses.php?mode=tabelvisitor", function(resp, stat){
+      let hasil = `<table class="table table-bordered table-hover" style="color:white;">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>PHONE</th>
+              <th>COMPANY NAME</th>
+              <th>POSITION</th>
+              <th>VISIT TIME</th>
+            </tr>
+          </thead>
+          <tbody>
+        `;
+      let no = 1;
+      for (const item of resp.data) {
+        hasil += `
+          <tr>
+            <th>${no}</th>
+            <td>${item.NAME}</td>
+            <td>${item.EMAIL}</td>
+            <td>${item.PHONE}</td>
+            <td>${item.COMPANY_NAME}</td>
+            <td>${item.POSITION}</td>
+            <td>${item.VISIT_TIME}</td>
+          </tr>
+        `;
+        no++;
+      }
+      hasil += `</tbody></table>`;
+      $('#dvDokumen').html(hasil);
+    });
+  };
+
+  $(document).ready(function () {
+    getDocuments();
+  });
+  
+</script>

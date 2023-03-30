@@ -53,7 +53,6 @@
         text-decoration: none;
       }
       .handphone {
-        width: 576px;
         min-height: 100vh;
         background-image: url('./images/bgtop02.png'), linear-gradient(to right, #5dc4f0, #6bbb97);
         background-size: 100%;
@@ -212,46 +211,23 @@
     <div class="d-flex justify-content-center" id="dvLoad">
       <div class="handphone2">
         <img src="./images/fjg.png" style="width: 50%; min-width:200px; padding: 35px 0px 35px;"/>
-        <div class="d-flex" style="text-align: left; padding: 10px 15px;">
-          <span class="huruf-std" style="margin-bottom: 15px;">
-            PT Fratekindo Jaya Gemilang was founded in 1991 as exclusive sole agent of Lectra France in Indonesia. Lectra is the world leader in integrated technology CAD/CAM solution based in France.
-            <br/><br/>
-            Thanks to fill in your professional's contact below prior to download our documentations
-          </span>
-          <img src="./images/50lectra.png" style="width: 80px; height: 80px; margin-left: 20px;"/>
-        </div>
         <div class="container">
           <form id="frRegistrasi">
             <div class="item-input">
-              <label class="form-label">Fullname <span style="color: yellow;">*</span></label>
-              <input type="text" class="form-control" name="nama">
+              <label class="form-label">Username <span style="color: yellow;">*</span></label>
+              <input type="text" class="form-control" name="username">
             </div>
             <div  class="item-input">
-              <label class="form-label">Email <span style="color: yellow;">*</span></label>
-              <input type="email" class="form-control" name="email">
-            </div>
-            <div  class="item-input">
-              <label class="form-label">Phone</label>
-              <input type="text" class="form-control" name="no_hp">
-            </div>
-            <div  class="item-input">
-              <label class="form-label">Company Name</label>
-              <input type="text" class="form-control" name="perusahaan">
-            </div>
-            <div  class="item-input">
-              <label class="form-label">Position</label>
-              <input type="text" class="form-control" name="jabatan">
+              <label class="form-label">Password <span style="color: yellow;">*</span></label>
+              <input type="password" class="form-control" name="password">
             </div>
           </form>
         </div>
-        <button class="tombol-submit align-self-center" type="button" onclick="saveData()">
-          <span class="huruf-std">Submit</span>
+        <button class="tombol-submit align-self-center" type="button" onclick="Login()">
+          <span class="huruf-std">Login</span>
         </button>
-        <a style="margin-top: 50px;" type="button" onclick="window.open('http://www.fratekindo.com')">
-          <span class="huruf-std">www.fratekindo.com</span>
-        </a>
-        <span class="huruf-dinamis" style="margin-top: 15px;">&copy; PT. Fratekindo Jaya Gemilang</span>
-        <span class="huruf-dinamis" style="margin-bottom: 30px;">2023</span>
+        <span class="huruf-std">&copy; PT. Fratekindo Jaya Gemilang</span>
+        <span class="huruf-std" style="margin-bottom: 30px;">2023</span>
       </div>
     </div>
     
@@ -264,7 +240,6 @@
         Swal.fire({
           position: 'top-end',
           icon: 'error',
-          title: 'Error!',
           text: message,
         });
       }
@@ -279,13 +254,12 @@
         });
       }
 
-      function saveData() {
+      function Login() {
         if($("#frRegistrasi").valid()) {
           var data = $( "#frRegistrasi" ).serialize();
-          $.post("proses.php?mode=add", data, function(resp, stat){
+          $.post("proses.php?mode=adminlogin", data, function(resp, stat){
             if(resp.status.toString() == "1") {
-              showMessageSuccess(resp.message);
-              $("#dvLoad").load('katalog.html'); 
+              $("#dvLoad").load('admin-dash.html'); 
             } else {
               showMessageError(resp.message);
             }
@@ -294,15 +268,22 @@
       }
 
       function loadKatalog() {
-        $("#dvLoad").load('katalog.html');
+        <?php
+          $cookie = $_COOKIE;
+          if(isset($cookie['fjgadmin'])) {
+            ?>
+              $("#dvLoad").load('admin-dash.html'); 
+            <?php
+          }
+        ?>
       }
 
       $(document).ready(function () {
         loadKatalog();
         $("#frRegistrasi").validate({
           rules: {
-            nama: {required: true},
-            email: {required: true},
+            username: {required: true},
+            password: {required: true},
           },
           errorPlacement: function (error, element) {
             error.addClass('warning-feedback');
